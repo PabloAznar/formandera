@@ -1,0 +1,87 @@
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-toolbar {
+  background-color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.mat-form-field {
+  margin-left: 20px;
+
+}
+
+#rango {
+  margin-left: 20px;
+}
+
+#form {
+  width: 95%;
+}
+
+button {
+  margin-left: 15px;
+  background-color: rgb(135, 135, 135);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  width: 100px;
+  height: 40px;
+  margin-left: 80px;
+}
+
+#cancelar {
+  margin-left: 30px;
+  background-color: rgb(183, 21, 21);
+}
+
+button:hover {
+  background-color: rgba(135,135,135,0.8);
+}
+
+.alert {
+  color: red;
+}
+
+.alert_fechaIni {
+  margin-left: -185px;
+  margin-top: 10px;
+}
+
+.alert_mat {
+  margin-left: -115px;
+}
+
+.alert_niv {
+  margin-left: -165px;
+}
+
+.alert_ini {
+  margin-left: -225px;
+}
+
+.alert_fin {
+  margin-left: -244px;
+}
+
+.alert_horas {
+  margin-left: -205px;
+}
+
+.alert_dur {
+  margin-left: -180px;
+}
+
+.alert_comp {
+  margin-top: 10px;
+  margin-left: -163px;
+}
+
+#cancelar:hover {
+  background-color: rgba(183, 21, 21, 0.8);
+}

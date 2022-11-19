@@ -1,0 +1,22 @@
+<div class="search" >
+  <mat-card id="card">
+    <mat-toolbar>Inicio de sesión</mat-toolbar>
+      <mat-form-field>
+        <input matInput placeholder="Email"
+          [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Clave"
+          [(ngModel)]="clave" name="clave" required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button type="submit" (click)="onSubmit()">
+        Iniciar sesión
+      </button>
+      <button id="cancelar" mat-raised-button type="submit" (click)="onCancel()">
+        Cancelar
+      </button>
+      <div class="alert" *ngIf="!loginOk">Email o contraseña invalidos</div>
+  </mat-card>
+</div>

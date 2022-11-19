@@ -1,0 +1,54 @@
+.registro {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+form {
+  width: 400px;
+}
+
+.mat-toolbar {
+  background-color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+.mat-form-field {
+  margin-left: 60px;
+  width: 70%;
+}
+
+.alert{
+  color: red;
+  margin-left: 60px;
+}
+
+.alert_reg{
+  margin-top: 10px;
+}
+
+button {
+  margin-left: 80px;
+  background-color: rgb(135, 135, 135);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  width: 100px;
+  height: 40px;
+}
+
+#cancelar {
+  margin-left: 40px;
+  background-color: rgb(183, 21, 21);
+}
+
+button:hover {
+  background-color: rgba(135,135,135,0.8);
+}
+
+#cancelar:hover {
+  background-color: rgba(183, 21, 21, 0.8);
+}

@@ -1,0 +1,74 @@
+<div>
+  <mat-card id="card">
+    <mat-toolbar id="comprar">Comprar paquete</mat-toolbar>
+    <mat-form-field id="form">
+      <mat-label>Seleccione fecha de inicio del curso</mat-label>
+      <input matInput [matDatepicker]="picker" required [(ngModel)]="registro.fechaInicio" #fechaInicio="ngModel">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker id="picker" #picker></mat-datepicker>
+    </mat-form-field>
+    <div class="alert alert_fechaIni" *ngIf="fechaInicio.invalid && (fechaInicio.dirty || fechaInicio.touched)">
+      <div *ngIf="fechaInicio.errors?.['required']">Introduzca la fecha de inicio</div>
+    </div>
+    <br>
+    <mat-form-field id="form">
+      <mat-label>Seleccione materias</mat-label>
+      <mat-select required multiple [(ngModel)]="registro.materias_seleccionadas" #materias="ngModel">
+        <mat-option *ngFor="let materia of listaMaterias" [value]="materia">{{materia}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="alert alert_mat" *ngIf="fechaInicio.invalid && (materias.dirty || materias.touched)">
+      <div *ngIf="materias.errors?.['required']">Debe seleccionar al menos una materia</div>
+    </div>
+    <br>
+    <mat-form-field id="form">
+      <mat-label>Seleccione nivel</mat-label>
+      <mat-select [(ngModel)]="registro.nivel" required #nivel="ngModel">
+        <mat-option *ngFor="let nivel of niveles" [value]="nivel">
+          {{nivel}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="alert alert_niv" *ngIf="nivel.invalid && (nivel.dirty || nivel.touched)">
+      <div *ngIf="nivel.errors?.['required']">Seleccione el nivel de dificultad</div>
+    </div>
+    <br>
+    <mat-label id="rango">Rango horario</mat-label>
+    <br>
+      <mat-form-field>
+          <mat-label for="@next">Inicio</mat-label>
+          <input matInput label="Inicio" type="time" required [(ngModel)]="registro.inicio" #inicio="ngModel" >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="fin">Fin</mat-label>
+          <input id="@next" matInput label="Inicio" type="time" required [(ngModel)]="registro.fin" #fin="ngModel" >
+      </mat-form-field>
+      <div class="alert alert_ini" *ngIf="inicio.invalid && (inicio.dirty || inicio.touched)">
+        <div *ngIf="inicio.errors?.['required']">Indique hora de inicio</div>
+      </div>
+      <div class="alert alert_fin" *ngIf="fin.invalid && (fin.dirty || fin.touched)">
+        <div *ngIf="fin.errors?.['required']">Indique hora de fin</div>
+      </div>
+    <br>
+    <mat-form-field id="form">
+      <mat-label>Horas semanales</mat-label>
+      <input matInput type="number" required [(ngModel)]="registro.horas" #horas="ngModel">
+    </mat-form-field>
+    <div class="alert alert_horas" *ngIf="horas.invalid && (horas.dirty || horas.touched)">
+      <div *ngIf="horas.errors?.['required']">Indique horas semanales</div>
+    </div>
+    <br>
+    <mat-form-field id="form">
+      <mat-label>Duración (meses)</mat-label>
+      <input matInput type="number" required [(ngModel)]="registro.duracion" #duracion="ngModel">
+    </mat-form-field>
+    <div class="alert alert_dur" *ngIf="duracion.invalid && (duracion.dirty || duracion.touched)">
+      <div *ngIf="duracion.errors?.['required']">Indique la duracion del curso</div>
+    </div>
+    <br>
+      <button mat-raised-button (click)="comprarPaquete()">Comprar</button>
+      <button id="cancelar" mat-raised-button (click)="gotoMain()">Cancelar</button>
+      <div class="alert alert_comp" *ngIf="!registroOk">Debe rellenar todos los campos</div>
+  </mat-card>
+</div>

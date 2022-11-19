@@ -1,0 +1,21 @@
+<div class="banner">
+
+</div>
+<div class="search">
+  <mat-card class="mat-elevation-z0">
+    <mat-toolbar id="buscador">Buscador</mat-toolbar>
+    <mat-form-field>
+      <input id="barra_busqueda" type="search" matInput placeholder="Search">
+    </mat-form-field>
+    <button mat-button>Buscar</button>
+    <br>
+      <mat-radio-group
+      aria-labelledby="radio-group-label"
+      class="radio-group"
+      [(ngModel)]="selected">
+      <mat-radio-button class="radio-button" *ngFor="let busqueda of tipo_busqueda" [value]="busqueda">
+        {{busqueda}}
+      </mat-radio-button>
+      </mat-radio-group>
+  </mat-card>
+</div>

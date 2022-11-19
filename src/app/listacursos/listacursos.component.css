@@ -1,0 +1,25 @@
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.mat-table {
+  margin-left: 35%;
+  margin-top: 40px;
+}
+
+.mat-header-cell{
+  background-color: rgb(183, 21, 21);
+  border: 1px solid #b5b2b2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.mat-cell {
+  border: 1px solid #b5b2b2;
+  text-align: center;
+  min-width: 150px;
+}

@@ -1,0 +1,49 @@
+.banner {
+  background-image: url("../../assets/imagen.webp");
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+}
+
+.search {
+  margin-top: 20px;
+  display:flex;
+  justify-content: center;
+}
+
+#buscador {
+  margin-left: 55px;
+  background-color: white;
+}
+
+.mat-form-field {
+  width: 270px;
+  margin-left: 20px;
+}
+
+.mat-button {
+  margin-left: 15px;
+  background-color: rgb(135, 135, 135);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.mat-button:hover {
+  background-color: rgba(135,135,135,0.8);
+}
+
+.mat-radio-group {
+  margin-left: 20px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 60px;
+}
+
+.mat-toolbar {
+  font-size: 36px;
+  font-weight: bold;
+}
+

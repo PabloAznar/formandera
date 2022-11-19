@@ -1,0 +1,45 @@
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.mat-toolbar {
+  background-color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.mat-form-field {
+  margin-left: 20px;
+  width: 80%;
+}
+
+button {
+  margin-left: 15px;
+  background-color: rgb(135, 135, 135);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#cancelar {
+  margin-left: 30px;
+  background-color: rgb(183, 21, 21);
+}
+
+button:hover {
+  background-color: rgba(135,135,135,0.8);
+}
+
+#cancelar:hover {
+  background-color: rgba(183, 21, 21, 0.8);
+}
+
+.alert {
+  color: red;
+  margin-left: 20px;
+  margin-top: 10px;
+}

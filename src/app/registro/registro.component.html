@@ -1,0 +1,76 @@
+<div class="registro">
+  <mat-card id="card">
+    <form >
+    <mat-toolbar>Registrate</mat-toolbar>
+      <mat-form-field>
+        <input matInput placeholder="Email" #email="ngModel"
+        [(ngModel)]="registro.email" name="email" required>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="nombre.errors?.['required']">Introduzca un correo</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Nombre" #nombre="ngModel"
+        [(ngModel)]="registro.nombre" name="nombre" required>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+        <div *ngIf="nombre.errors?.['required']">Introduzca su nombre</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Apellidos" #apellidos="ngModel"
+        [(ngModel)]="registro.apellidos" name="apellidos" required >
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)">
+        <div *ngIf="nombre.errors?.['required']">Introduzca sus apellidos</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <mat-label>Fecha nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" required #cal="ngModel"
+        [(ngModel)]="registro.fechaNacimiento" name="fechaNacimiento">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="cal.invalid && (cal.dirty || cal.touched)">
+        <div *ngIf="cal.errors?.['required']">Introduzca su fecha de nacimeinto</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Pais" #pais="ngModel"
+        [(ngModel)]="registro.pais" name="Pais" required>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="pais.invalid && (pais.dirty || pais.touched)">
+        <div *ngIf="nombre.errors?.['required']">Introduzca su país de residencia</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Clave" type="password" #clave="ngModel"
+        [(ngModel)]="registro.clave" name="clave" required>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="clave.invalid && (clave.dirty || clave.touched)">
+        <div *ngIf="clave.errors?.['required']">Introduzca una clave</div>
+      </div>
+      <br>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Repetir clave" #repetirClave="ngModel"
+        [(ngModel)]="registro.repetirClave" name="repetirClave" required>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="repetirClave.invalid && (repetirClave.dirty || repetirClave.touched)">
+        <div *ngIf="repetirClave.errors?.['required']">Repita la clave</div>
+        <div *ngIf="repetirClave.errors?.['notEquals']">Las claves no coinciden</div>
+      </div>
+      <br>
+      <button mat-raised-button type="submit" (click)="onSubmit()">
+        Aceptar
+      </button>
+      <button id="cancelar" mat-raised-button type="submit" (click)="onCancel()">
+        Cancelar
+      </button>
+      <div class="alert alert_reg" *ngIf="!registroOk">Debe rellenar todos los campos</div>
+    </form>
+  </mat-card>
+</div>
+
