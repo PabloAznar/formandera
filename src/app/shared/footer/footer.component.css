@@ -1,13 +1,15 @@
 .footer {
-  overflow: hidden;
-  position: sticky;
-  top: 100%;
   background-color: rgb(183, 21, 21);
+  padding: 1.5rem 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 p {
-  color: white;
+  color: rgba(255,255,255, 1);
   text-align: right;
   font-weight: bold;
-  margin-right: 10px;
+  margin: 0;
 }

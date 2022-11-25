@@ -1,8 +1,8 @@
-
 .search {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 2rem 0 4rem 0;
+  min-height: 40vh;
 }
 
 .mat-toolbar {
@@ -19,6 +19,7 @@
 button {
   margin-left: 15px;
   background-color: rgb(135, 135, 135);
+  color: #FFF;
   border: none;
   border-radius: 20px;
   cursor: pointer;

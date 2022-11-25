@@ -1,36 +1,40 @@
-nav {
-  height: 120px;
-  width: auto;
+.mainheader {
   background-color: rgb(183, 21, 21);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mainheader h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.mainheadermenu {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
 }
 
-p {
-  font-size: 50px;
-  text-align:left;
-  color:white;
-  font-weight: bold;
-  padding: 30px;
+.mainheadermenu button:not(:last-child) {
+  margin-right: 1rem;
 }
 
-.mat-raised-button {
-  left: 1000px;
-  padding: 9px 25px;
-  margin: 10px;
-  background-color: rgb(135, 135, 135);
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
+@media (max-width: 600px) {
+  .mainheader h1 {
+    margin-bottom: 1rem;
+  }
 
-.mat-raised-button:hover {
-  background-color: rgba(135,135,135,0.8);
-}
+  .mainheadermenu button:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 
-.mat-icon-button {
-  left: 1200px;
+  .mainheadermenu {
+    flex-direction: column;
+  }
 }
 
 .iconbutton {
@@ -49,4 +53,3 @@ p {
 .iconbutton:hover {
   opacity: 0.5;
 }
-

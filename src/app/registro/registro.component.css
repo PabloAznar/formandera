@@ -1,43 +1,42 @@
 .registro {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-form {
-  width: 400px;
+  padding: 3rem 0 2rem 0;
+  margin: 1.5rem auto;
+  max-width: 30rem;
 }
 
 .mat-toolbar {
-  background-color: white;
-  font-size: 36px;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 1rem 0 0 0;
   font-weight: bold;
-  margin-left: 100px;
+  display: block;
+  text-align: center;
 }
 
 .mat-form-field {
-  margin-left: 60px;
-  width: 70%;
+  display: block;
 }
 
 .alert{
   color: red;
-  margin-left: 60px;
 }
 
 .alert_reg{
   margin-top: 10px;
 }
 
+.buttoncontainer {
+  padding: 1rem;
+  text-align: center;
+}
+
 button {
-  margin-left: 80px;
   background-color: rgb(135, 135, 135);
+  color: #FFF;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  width: 100px;
-  height: 40px;
 }
 
 #cancelar {
