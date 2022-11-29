@@ -1,33 +1,32 @@
 <header class="mainheader">
-  <nav class="mainheadermenu">
-    <h1>Formandera</h1>
-    <div *ngIf="!isLogged() ;else logged">
-        <button mat-raised-button (click)="iniciar_sesion()">Iniciar sesión</button>
-        <button mat-raised-button (click)="registro()">Registrate</button>
-    </div>
-    <ng-template #logged>
+<nav class="mainheadermenu">
+  <h1>Formandera</h1>
+  <div *ngIf="!isLogged() ;else logged">
+      <button mat-raised-button (click)="iniciar_sesion()">Iniciar sesión</button>
+      <button mat-raised-button (click)="registro()">Registrate</button>
+  </div>
+  <ng-template #logged>
 
-      <button  class="iconbutton" [matMenuTriggerFor]="menu" >
-        <img
-          class="icon"
-          src="../../../assets/icon.png"
-        />
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="menu_idiomas">Seleccione idoma</button>
-        <button mat-menu-item (click)="onSelect()">Comprar paquete</button>
-        <button mat-menu-item (click)="cerrar_sesion()">Cerrar sesión</button>
-      </mat-menu>
+    <button  class="iconbutton" [matMenuTriggerFor]="menu" >
+      <img
+        class="icon"
+        src="../../../assets/icon.png"
+      />
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="menu_idiomas">Seleccione idoma</button>
+      <button mat-menu-item (click)="onSelect()">Comprar paquete</button>
+      <button mat-menu-item (click)="cerrar_sesion()">Cerrar sesión</button>
+    </mat-menu>
 
-      <mat-menu #menu_idiomas="matMenu">
-        <button mat-menu-item>Castellano</button>
-        <button mat-menu-item>Catalán</button>
-        <button mat-menu-item>Vasco</button>
-        <button mat-menu-item>Gallego</button>
-        <button mat-menu-item>Portugues</button>
-      </mat-menu>
+    <mat-menu #menu_idiomas="matMenu">
+      <button mat-menu-item>Castellano</button>
+      <button mat-menu-item>Catalán</button>
+      <button mat-menu-item>Vasco</button>
+      <button mat-menu-item>Gallego</button>
+      <button mat-menu-item>Portugues</button>
+    </mat-menu>
 
-    </ng-template>
-  </nav>
-  </header>
-
+  </ng-template>
+</nav>
+</header>
